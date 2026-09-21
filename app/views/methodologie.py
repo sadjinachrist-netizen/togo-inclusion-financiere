@@ -19,10 +19,9 @@ src = pd.DataFrame([
     ["Marché de la téléphonie", "ARCEP Togo (via Géoportail)", "10 indicateurs : abonnés, télédensité, CA, investissements, ARPU, parts de marché", "2013-2019"],
     ["Contours administratifs", "geoBoundaries (OSM, Wambacher), gbOpen", "5 régions, 37 préfectures — découpage 2017", "Source externe, licence ODbL / CC-BY-SA"],
 ], columns=["Jeu de données", "Producteur", "Contenu", "Période / note"])
-_md = "| " + " | ".join(src.columns) + " |
-|" + "---|" * len(src.columns) + "
-" + "
-".join("| " + " | ".join(str(v) for v in row) + " |" for row in src.values)
+NL = chr(10)
+_md = "| " + " | ".join(src.columns) + " |" + NL + "|" + "---|" * len(src.columns) + NL
+_md += NL.join("| " + " | ".join(str(v) for v in row) + " |" for row in src.values)
 st.markdown(_md)
 
 st.markdown("### Traitements")
