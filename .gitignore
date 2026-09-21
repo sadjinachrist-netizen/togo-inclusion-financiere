@@ -2,6 +2,6 @@ __pycache__/
 *.pyc
 app/qa/
 .claude/
-Data/
+/Data/
 *.zip
 .DS_Store

@@ -1,0 +1,23 @@
+{
+  "population_2022": 8095498,
+  "agents_mm": 19788,
+  "etab_financiers_actifs": 660,
+  "etab_financiers_total": 738,
+  "banques": 213,
+  "microfinances": 377,
+  "assurances": 62,
+  "mutuelles": 8,
+  "hab_par_etab_financier": 12266,
+  "hab_par_banque": 38007,
+  "hab_par_agent_mm": 409,
+  "agents_mm_par_1000_hab": 2.44,
+  "agents_mm_par_guichet": 33.5,
+  "cantons_total": 373,
+  "cantons_mm_uniquement": 246,
+  "agents_mm_en_zone_mm_uniquement": 3373,
+  "prefectures_sans_banque": 9,
+  "prefectures_sans_etab_financier": 1,
+  "communes_mm_uniquement": 22,
+  "pct_internet_2022": 37.6212,
+  "agents_mm_non_renseigne_pct": 6.8
+}
