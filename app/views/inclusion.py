@@ -53,7 +53,7 @@ with c1:
     xs = [p.population.min() * 0.9, p.population.max() * 1.1]
     fig.add_trace(go.Scatter(x=xs, y=[x / nat for x in xs], mode="lines", line=dict(color=C["muted"], dash="dot", width=1),
                              name=f"Moyenne nationale ({fmt(nat)} hab./étab.)", hoverinfo="skip"))
-    fig.update_layout(legend_y=1.08, xaxis=dict(tickformat=",.0f", title="Population 2022 (échelle log)"), yaxis=dict(title="Établissements financiers (échelle log)"))
+    fig.update_layout(legend_y=1.08, xaxis=dict(title="Population 2022 (échelle log)", tickvals=[50000, 100000, 200000, 500000, 1000000, 2000000], ticktext=["50 k", "100 k", "200 k", "500 k", "1 M", "2 M"]), yaxis=dict(title="Établissements financiers (échelle log)", tickvals=[1, 2, 5, 10, 20, 50, 100, 200]))
     plotly(fig, 430)
     source("Taille des bulles = nombre d'agents mobile money · sous la ligne pointillée : moins bien doté que la moyenne nationale")
 with c2:
