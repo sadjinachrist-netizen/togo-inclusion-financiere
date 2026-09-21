@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+app/qa/
+.claude/
+Data/
+*.zip
+.DS_Store
