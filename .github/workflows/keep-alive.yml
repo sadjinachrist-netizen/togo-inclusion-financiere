@@ -14,7 +14,11 @@ jobs:
     steps:
       - name: Ping the dashboard
         run: |
-          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 120 \
+          # -L suit les redirections : Streamlit Cloud répond 303 avant de servir la page
+          code=$(curl -sL -o /dev/null -w "%{http_code}" --max-time 180 \
             https://togo-inclusion-financiere.streamlit.app/)
           echo "HTTP $code"
-          test "$code" = "200"
+          case "$code" in
+            2*|3*) echo "Dashboard joignable." ;;
+            *) echo "Dashboard injoignable (HTTP $code)"; exit 1 ;;
+          esac
